@@ -32,8 +32,12 @@ ORDER BY `tenant_id`
 
 `subscription` is the tenant's name (the Forest customer company).
 
-- **No rows:** tell the user that their account cannot see any Forest data, and to ask the Forest
-  DWH administrator for access. Stop.
+**Wording:** never say "tenant", "DWH" or "subscription" to the user. In Hungarian, a tenant is a
+"Forest-előfizetés" (or just name the company), e.g. "Több Forest-előfizetés adataihoz is
+hozzáférsz. Melyikről szól a kérdés?"
+
+- **No rows:** tell the user that their account cannot see any Forest data, and to ask Forest
+  for access. Stop.
 - **One row:** use that tenant without asking. Name it once in your first answer, e.g.
   "(Példa Kft adatai alapján)".
 - **Several rows and the question does not name a tenant:** ask the user to pick. List each as
