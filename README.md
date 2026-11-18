@@ -8,9 +8,20 @@ kapcsolattartók, lehetőségek, tevékenységek, számlák.
 1. Nyisd meg a **Customize → Plugins** oldalt, és válaszd az **Add marketplace** lehetőséget.
 2. Írd be: `smilingsoftware/forest-ai`
 3. A megjelenő listában telepítsd a **forest** plugint.
-4. Kapcsold be a **Sync automatically** opciót, így az új verziók maguktól megérkeznek.
+
+Ha ezután a „To sync it automatically, grant the Claude GitHub App access” üzenet jelenik meg,
+egyszerűen zárd be: GitHub-fiók nem kell, a plugin enélkül is működik.
 
 A plugin a fiókodhoz kötődik, ezért a Claude Desktopban is megjelenik.
+
+## Frissítés
+
+Új verzió esetén szólunk. Ilyenkor:
+
+1. A **Plugins** oldalon kattints az **Add** gombra, és válaszd a **Manage marketplaces** lehetőséget.
+2. A **forest-ai** sor **…** menüjében válaszd a **Check for updates** lehetőséget.
+
+A plugin oldalán (Forest) a **Version** mező mutatja, melyik verzió van telepítve.
 
 ## BigQuery-kapcsolat beállítása
 
