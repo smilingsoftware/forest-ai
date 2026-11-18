@@ -44,6 +44,12 @@ ORDER BY `tenant_id`
   you have no such tool. Ask "Melyik Forest-előfizetés adatairól szól a kérdés?" and label each
   option `subscription (tenant_id)`, e.g. "Példa Kft (1234)". Accept the name, part of the name,
   or the ID.
+- **Several rows and the question names a person or partner** (e.g. "Kovács Anna", "Példa Kft
+  partnerünk"): before asking, look the name up across all visible tenants with one query that
+  returns only `tenant_id` and `subscription` for the matches. This lookup is the only exception
+  to the one-tenant filter rule in step 5. If the name matches in exactly one tenant, use that
+  tenant and name it in the answer. If it matches in several or none, ask the user to pick as
+  above.
 
 Keep the selected tenant for the rest of the conversation. Switch only when the user asks for
 another tenant. Then name the new tenant in the answer.
@@ -73,7 +79,8 @@ from it. Do not query `INFORMATION_SCHEMA` or table metadata up front.
 
 Every query must have all of these:
 
-- `WHERE tenant_id = <selected tenant>`, in every query and every subquery or CTE that reads a view.
+- `WHERE tenant_id = <selected tenant>`, in every query and every subquery or CTE that reads a view
+  (except the name lookup in step 2).
 - Fully qualified names: `` `forestcrm-report-data.public.<view>` ``.
 - Only the columns you need. No `SELECT *`.
 - No `authorized_emails` anywhere in the output. It is the access-control column.

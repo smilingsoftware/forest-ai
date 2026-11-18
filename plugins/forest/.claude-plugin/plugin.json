@@ -1,6 +1,6 @@
 {
   "name": "forest",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Kérdezz a Forest adataidról magyarul, és Claude kikeresi a választ.",
   "author": {
     "name": "Forest"
