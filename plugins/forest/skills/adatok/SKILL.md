@@ -33,16 +33,17 @@ ORDER BY `tenant_id`
 `subscription` is the tenant's name (the Forest customer company).
 
 **Wording:** never say "tenant", "DWH" or "subscription" to the user. In Hungarian, a tenant is a
-"Forest-előfizetés" (or just name the company), e.g. "Több Forest-előfizetés adataihoz is
-hozzáférsz. Melyikről szól a kérdés?"
+"Forest-előfizetés" (or just name the company).
 
 - **No rows:** tell the user that their account cannot see any Forest data, and to ask Forest
   for access. Stop.
 - **One row:** use that tenant without asking. Name it once in your first answer, e.g.
   "(Példa Kft adatai alapján)".
-- **Several rows and the question does not name a tenant:** ask the user to pick. List each as
-  `subscription (tenant_id)`, e.g. "Példa Kft (1234)". Accept the name, part of the name, or
-  the ID.
+- **Several rows and the question does not name a tenant:** ask the user to pick. If you have a
+  tool that shows the user clickable options, use it; write the plain-text list below only when
+  you have no such tool. Ask "Melyik Forest-előfizetés adatairól szól a kérdés?" and label each
+  option `subscription (tenant_id)`, e.g. "Példa Kft (1234)". Accept the name, part of the name,
+  or the ID.
 
 Keep the selected tenant for the rest of the conversation. Switch only when the user asks for
 another tenant. Then name the new tenant in the answer.
