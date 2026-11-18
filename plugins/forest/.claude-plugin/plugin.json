@@ -1,9 +1,14 @@
 {
   "name": "forest",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Kérdezz a Forest adataidról magyarul, és Claude kikeresi a választ.",
   "author": {
     "name": "Forest"
   },
-  "keywords": ["forest", "bigquery", "dwh", "analytics"]
+  "keywords": [
+    "forest",
+    "bigquery",
+    "dwh",
+    "analytics"
+  ]
 }
