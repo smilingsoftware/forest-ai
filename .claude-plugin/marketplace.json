@@ -1,0 +1,14 @@
+{
+  "name": "forest-ai",
+  "description": "Forest: kérdezz a Forest adataidról magyarul.",
+  "owner": {
+    "name": "Forest"
+  },
+  "plugins": [
+    {
+      "name": "forest",
+      "source": "./plugins/forest",
+      "description": "Kérdezz a Forest adataidról magyarul, és Claude kikeresi a választ."
+    }
+  ]
+}
